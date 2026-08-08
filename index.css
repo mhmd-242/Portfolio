@@ -1,9 +1,11 @@
 :root {
-    --font-size-primary: clamp(2rem, 1.54rem + 1.97vw, 3.3125rem);
-    --font-size-secondary: clamp(1.875rem, 1.8rem + 0.4vw, 2.1875rem);
+    --font-size-primary: clamp(2rem, 1.12rem + 3.76vw, 4.5rem);
+    --font-size-secondary: clamp(1rem, 0.824rem + 0.47vw, 1.5rem);;
     --font-size-tertiary: clamp(0.875rem, 0.85rem + 0.15vw, 0.9375rem);
     --bg-primary: #050505 ;
     --bg-secondary: #FF6600 ;
+    --bg-tertiary: #ffffff1a ;
+    --bg-quaternary: #050505f2 ;
     --font-family-primary: "Syne", 'Poppins', system-ui, sans-serif ;
     --font-family-secondary: "Rubik", -apple-system, 'Segoe UI', sans-serif ;
     --left-right-spacing: clamp(1rem, -0.45rem + 6.2vw, 6.25rem);
@@ -11,6 +13,8 @@
     --font-color-primary: #FFFFFF ;
     --font-color-secondary: #8A8A8A ;
     --cta-gradient: linear-gradient(to right, #AD4400, #f97d2a) ;
+    --hover-shadow: 2px 2px 5px #606060 ,
+                    -2px -2px 5px #606060;
 }
 * {
     box-sizing: border-box;
@@ -23,13 +27,17 @@ html {
 body {
     background-color: var(--bg-primary);
 }
-h1 , h3 {
+h1 , h2 , h3 {
     font-family: var(--font-family-primary);
     color: var(--font-color-primary);
 }
 p , a {
     font-family: var(--font-family-secondary);
     color: var(--font-color-secondary);
+}
+a:focus-visible , button:focus-visible {
+    outline: 1px solid var(--border);
+    outline-offset: 3px;
 }
 header {
     position: fixed;
@@ -42,17 +50,24 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 2rem var(--left-right-spacing);
-    background: #0505058c;
-    backdrop-filter: blur(4px);
+    background: var(--bg-tertiary);
+    backdrop-filter: blur(6px);
     position: relative;
 }
-.nav__logo a {
+.nav__logo-text-link {
     text-decoration: none;
+    color: var(--font-color-primary);
+    font-size: var(--font-size-secondary);
 }
 .nav__hamburger {
     background: transparent;
     border: none;
     color: var(--font-color-primary);
+}
+.nav__logo-text-link:hover ,
+.nav__hamburger:hover {
+    cursor: pointer;
+    color: var(--bg-secondary);
 }
 .nav__hamburger-icon {
     width: 2rem;
@@ -66,12 +81,12 @@ nav {
     left: 0;
     right: 0;
     list-style: none;
-    display: flex;
+    display: none;
     flex-direction: column;
-    background: #050505f2;
-    backdrop-filter: blur(12px);
+    background: var(--bg-quaternary);
+    backdrop-filter: blur(18px);
     padding: 1rem;
-    border: 0.05px solid var(--border);
+    border-bottom: 0.05px solid var(--border);
     border-radius: 0 0 20px 20px;
 }
 .nav__links-mobile {
@@ -88,19 +103,18 @@ nav {
     color: var(--bg-secondary);
 }
 .nav__links-mobile--contact-cta {
-    background: var(--cta-gradient);
+    background: var(--bg-primary);
     border-radius: 15px;
     border: 1px solid var(--border);
 }
 .hero {
     padding: 0 var(--left-right-spacing);
-    height: 80vh;
+    height: 100vh;
     position: relative;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+
 }
 .hero::before {
     content: "";
@@ -119,17 +133,39 @@ nav {
     z-index: -11;
     background: radial-gradient(ellipse at 70% 30%, #5a26088c, transparent 60%) ;
 }
+.hero__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
 .hero__heading {
     text-align: center;
     font-size: var(--font-size-primary);
+    animation: loadhero 0.6s ease-in forwards;
 }
 .hero__description {
     text-align: center;
-    font-size: var(--font-size-tertiary);
+    font-size: var(--font-size-secondary);
+    max-width: 550px;
+    line-height: 1.5;
+    animation: loadhero 0.6s ease-in 0.2s forwards;
 }
 .hero__actions {
     display: flex;
     gap: 1rem;
+    animation: loadhero 0.6s ease-in 0.4s forwards;
+}
+@keyframes loadhero {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .hero__actions-button {
     text-decoration: none;
@@ -140,11 +176,95 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: box-shadow .2s ease;
 }
 .hero__actions-button--primary {
     background: var(--cta-gradient);
+    color: var(--bg-primary);
+    font-weight: 500;
 }
 .hero__actions-button--secondary {
     background-color: var(--bg-primary);
     border: 1px solid var(--border);
+}
+.hero__actions-button:hover {
+    box-shadow: var(--hover-shadow);
+}
+.skills {
+    padding: 3rem var(--left-right-spacing);
+}
+.skills__heading {
+    text-align: center;
+    margin-bottom: 4rem;
+    opacity: 0;
+    animation: loadskills 0.3s ease-in forwards;
+}
+.skills__wrapper {
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 900px;
+}
+.skills__frontend ,
+.skills__tools{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background: var(--bg-tertiary);
+    padding: 1rem 0;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    transition: box-shadow .2s ease;
+}
+.skills__frontend {
+    animation: loadskills 0.3s ease-in 0.1s forwards;
+}
+.skills__tools {
+    animation: loadskills 0.3s ease-in 0.2s forwards;
+}
+@keyframes loadskills {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.skills__frontend:hover ,
+.skills__tools:hover {
+    box-shadow: var(--hover-shadow);
+}
+.skills__frontend-images-img ,
+.skills__tools-images-img {
+    width: 6rem;
+}
+@media (prefers-reduced-motion: no-preference) {
+    .hero__heading ,
+    .hero__description ,
+    .hero__actions ,
+    .skills__heading ,
+    .skills__frontend ,
+    .skills__tools{
+        opacity: 0;
+    }
+
+}
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none;
+        animation: none;
+    }
+    .hero__heading ,
+    .hero__description ,
+    .hero__actions ,
+    .skills__heading ,
+    .skills__frontend ,
+    .skills__tools {
+        opacity: 1;
+    }
 }

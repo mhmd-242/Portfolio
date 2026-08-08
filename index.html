@@ -13,9 +13,9 @@
     <header>
         <nav>
             <div class="nav__logo">
-                <h3>
-                    <a href="#">mhmd.dev</a>
-                </h3>
+                <p class="nav__logo-text">
+                    <a href="#" class="nav__logo-text-link">mhmd.dev</a>
+                </p>
             </div>
             <button class="nav__hamburger">
                 <svg xmlns="http://www.w3.org/2000/svg" class="nav__hamburger-icon nav__hamburger-icon--open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -30,6 +30,7 @@
             </button>
             <ul class="nav__links-wrapper-mobile">
                 <li><a href="#skills" class="nav__links-mobile">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#projects" class="nav__links-mobile">Projects</a></li>
                 <li><a href="#about" class="nav__links-mobile">About</a></li>
                 <li><a href="#contact" class="nav__links-mobile">Contact</a></li>
@@ -41,14 +42,47 @@
 
     <main>
         <section class="hero">
-            <h1 class="hero__heading">Junior Frontend Developer</h1>
-            <p class="hero__description">A junior developer focused on writing clean, maintainable code, 
-                and creating good digital experiences that make a positive 
-                impact for users.
-            </p>
-            <div class="hero__actions">
-                <a href="#contact" class="hero__actions-button hero__actions-button--primary">Hire Me</a>
-                <a href="#projects" class="hero__actions-button hero__actions-button--secondary">Projects</a>
+            <div class="hero__wrapper">
+                <h1 class="hero__heading">Junior Frontend Developer</h1>
+                <p class="hero__description">A junior developer focused on writing clean, maintainable code, 
+                    and creating good digital experiences that make a positive 
+                    impact for users.
+                </p>
+                <div class="hero__actions">
+                    <a href="#contact" class="hero__actions-button hero__actions-button--primary">Hire Me</a>
+                    <a href="#projects" class="hero__actions-button hero__actions-button--secondary">Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills" id="skills">
+            <h2 class="skills__heading">Technologies I use</h2>
+            <div class="skills__wrapper">
+                <div class="skills__frontend">
+                    <h3>Frontend</h3>
+                    <div class="skills__frontend-images">
+                        <img src="Assets/html.png" alt="html" class="skills__frontend-images-img">
+                        <img src="Assets/css.png" alt="css" class="skills__frontend-images-img">
+                    </div>
+                </div>
+                <div class="skills__tools">
+                    <h3>Tools</h3>
+                    <div class="skills__tools-images">
+                        <img src="Assets/git.png" alt="git" class="skills__tools-images-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects">
+            <h2 class="projects__heading">Projects</h2>
+            <div class="projects__wrapper">
+                <div class="projects__wrapper-dataset">
+
+                </div>
+                <div class="projects__wrapper-anthropic">
+                    
+                </div>
             </div>
         </section>
     </main>
