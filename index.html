@@ -8,15 +8,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
     <link rel="icon" href="Assets/favicon.png">
     <link rel="stylesheet" href="index.css">
-    <title>Muhammed Oumer</title>
+    <title>Muhammed Oumer | Frontend Developer</title>
+    <meta name="description" content="Portfolio of Muhammed Oumer, a junior frontend developer building clean, maintainable, and thoughtful digital experiences.">
 </head>
 <body>
     <header>
         <nav>
             <div class="nav__logo">
-                <p class="nav__logo-text">
-                    <a href="#" class="nav__logo-text-link">mhmd.dev</a>
-                </p>
+                <h3 class="nav__logo-text">
+                    <a href="index.html" class="nav__logo-text-link">
+                        <img src="Assets/favicon.png" alt="" class="nav__logo-img">
+                        Muhammed O.
+                    </a>
+                </h3>
             </div>
             <button class="nav__hamburger">
                 <svg xmlns="http://www.w3.org/2000/svg" class="nav__hamburger-icon nav__hamburger-icon--open" width="24"
@@ -34,11 +38,34 @@
                 </svg>
             </button>
             <ul class="nav__links-wrapper-mobile">
+                <li><a href="#about" class="nav__links-mobile">About</a></li>
                 <li><a href="#skills" class="nav__links-mobile">Skills</a></li>
                 <li><a href="#projects" class="nav__links-mobile">Projects</a></li>
-                <li><a href="#about" class="nav__links-mobile">About</a></li>
                 <li><a href="#contact" class="nav__links-mobile">Contact</a></li>
-                <li><a href="https://t.me/mhmd_242" target="_blank" class="nav__links-mobile nav__links-mobile--contact-cta">Download CV</a></li>
+                <li><a href="https://t.me/mhmd_242" target="_blank" class="nav__links-mobile nav__links-mobile--cta">
+                        Download CV
+                        <svg xmlns="http://www.w3.org/2000/svg" class="contact__link-mobile-cta-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M7 7h10v10"></path>
+                                <path d="M7 17 17 7"></path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav__links-wrapper-desktop">
+                <li><a href="#about" class="nav__links-desktop">About</a></li>
+                <li><a href="#skills" class="nav__links-desktop">Skills</a></li>
+                <li><a href="#projects" class="nav__links-desktop">Projects</a></li>
+                <li><a href="#contact" class="nav__links-desktop">Contact</a></li>
+            </ul>
+            <ul class="nav__cta-desktop">
+                <li><a href="" class="nav__link-cta-desktop">
+                        Download CV
+                        <svg xmlns="http://www.w3.org/2000/svg" class="contact__link-cta-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M7 7h10v10"></path>
+                                <path d="M7 17 17 7"></path>
+                        </svg>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -58,17 +85,53 @@
             </div>
         </section>
 
+        <section class="about" id="about">
+            <h2 class="about__heading">About Me</h2>
+            <div class="about__wrapper surface-card">
+                <div class="about__image">
+                    <img src="Assets/mypicture.jpg" alt="Muhammed Oumer" class="about__my-picture">
+                </div>
+                <div class="about__content">
+                    <p class="about__paragraph">
+                        I'm Muhammed, a frontend developer based in Shaggar City, Ethiopia, 
+                        currently studying Information Science at Addis Ababa University.
+                    </p>
+                    <p class="about__paragraph">
+                        I started programming in 2022/2023 with a little HTML, CSS, and JS, 
+                        then paused due to personal challenges and a lack of consistency. 
+                        I resumed in April 2026, starting with an introduction to C++, 
+                        and by the end of June made a deliberate pivot to frontend development 
+                        to pursue better opportunities in the market.
+                    </p>
+                    <p class="about__paragraph">
+                        That "master it or don't bother" approach still shapes how I work, 
+                        I don't move to the next technology until I actually understand the one I'm on.
+                    </p>
+                    <p class="about__paragraph">
+                        I'm looking to connect with people and teams building thoughtful, 
+                        well-crafted digital products, reach out if that's you.
+                    </p>
+                    <a href="#contact" class="about__cta-link">
+                        Contact Me
+                        <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="about__cta-link-svg">
+                            <line x1="7" y1="7" x2="17" y2="17"></line>
+                            <polyline points="17 7 17 17 7 17"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
         <section class="skills" id="skills">
             <h2 class="skills__heading">Technologies I use</h2>
             <div class="skills__wrapper">
-                <div class="skills__frontend">
+                <div class="skills__frontend surface-card">
                     <h3>Frontend</h3>
                     <div class="skills__frontend-images">
                         <img src="Assets/html.png" alt="html" class="skills__frontend-images-img">
                         <img src="Assets/css.png" alt="css" class="skills__frontend-images-img">
                     </div>
                 </div>
-                <div class="skills__tools">
+                <div class="skills__tools surface-card">
                     <h3>Tools</h3>
                     <div class="skills__tools-images">
                         <img src="Assets/git.png" alt="git" class="skills__tools-images-img">
@@ -80,7 +143,7 @@
         <section class="projects" id="projects">
             <h2 class="projects__heading">Projects</h2>
             <div class="projects__wrapper">
-                <div class="projects__dataset">
+                <div class="projects__dataset surface-card">
                     <div class="projects__image-wrapper">
                         <a href="https://dataset-et-clone.vercel.app/" class="projects__image-link" target="_blank">
                             <img src="Assets/ss-dataset-clone.png" alt="ss-dataset-clone" class="projects__img">
@@ -90,21 +153,15 @@
                         <div class="projects__info-heading">
                             <h3 class="projects__info-title">Dataset.ET Clone</h3>
                             <div class="projects__info-external-links">
-                                <a href="https://github.com/mhmd-242/dataset.et-clone" class="projects__info-links"
-                                    target="_blank">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        class="projects__info-links-svg projects__info-links-svg-gh">
-                                        <path
-                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                <a href="https://github.com/mhmd-242/dataset.et-clone" class="projects__info-links" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="projects__info-links-svg projects__info-links-svg-gh">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                     </svg>
                                 </a>
                                 <a href="https://dataset-et-clone.vercel.app/" class="projects__info-links"
                                     target="_blank">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 13"
-                                        class="projects__info-links-svg">
-                                        <path
-                                            d="M5.60002 0.899994C5.82094 0.899994 6.00002 1.07908 6.00002 1.29999C6.00002 1.52091 5.82094 1.69999 5.60002 1.69999H1.60002C1.37911 1.69999 1.20002 1.87908 1.20002 2.09999V10.9C1.20002 11.1209 1.37911 11.3 1.60002 11.3H10.4C10.6209 11.3 10.8 11.1209 10.8 10.9V6.89999C10.8 6.67908 10.9791 6.49999 11.2 6.49999C11.4209 6.49999 11.6 6.67908 11.6 6.89999V10.9C11.6 11.5627 11.0628 12.1 10.4 12.1H1.60002C0.937283 12.1 0.400024 11.5627 0.400024 10.9V2.09999C0.400024 1.43725 0.937283 0.899994 1.60002 0.899994H5.60002ZM11.2 0.899994C11.2299 0.899994 11.2598 0.903486 11.2891 0.91015C11.3078 0.91442 11.3259 0.920467 11.3438 0.927338C11.3496 0.9296 11.3552 0.932601 11.361 0.93515C11.3771 0.942258 11.3927 0.950169 11.4078 0.959369C11.414 0.963129 11.4206 0.966183 11.4266 0.970306C11.4466 0.984054 11.4654 0.999763 11.4828 1.01718L11.5344 1.07968C11.5431 1.09292 11.5485 1.1079 11.5555 1.12187C11.56 1.13085 11.5657 1.13915 11.5696 1.14843C11.5832 1.18169 11.5911 1.21637 11.5953 1.25156C11.5973 1.26761 11.6 1.28365 11.6 1.29999V4.49999C11.6 4.72091 11.4209 4.89999 11.2 4.89999C10.9791 4.89999 10.8 4.72091 10.8 4.49999V2.26562L7.48284 5.58281C7.32663 5.73902 7.07342 5.73902 6.91721 5.58281C6.761 5.4266 6.761 5.17339 6.91721 5.01718L10.2344 1.69999H8.00003C7.77911 1.69999 7.60003 1.52091 7.60003 1.29999C7.60003 1.07908 7.77911 0.899994 8.00003 0.899994H11.2Z"
-                                            fill="currentColor"></path>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 13" class="projects__info-links-svg">
+                                        <path d="M5.60002 0.899994C5.82094 0.899994 6.00002 1.07908 6.00002 1.29999C6.00002 1.52091 5.82094 1.69999 5.60002 1.69999H1.60002C1.37911 1.69999 1.20002 1.87908 1.20002 2.09999V10.9C1.20002 11.1209 1.37911 11.3 1.60002 11.3H10.4C10.6209 11.3 10.8 11.1209 10.8 10.9V6.89999C10.8 6.67908 10.9791 6.49999 11.2 6.49999C11.4209 6.49999 11.6 6.67908 11.6 6.89999V10.9C11.6 11.5627 11.0628 12.1 10.4 12.1H1.60002C0.937283 12.1 0.400024 11.5627 0.400024 10.9V2.09999C0.400024 1.43725 0.937283 0.899994 1.60002 0.899994H5.60002ZM11.2 0.899994C11.2299 0.899994 11.2598 0.903486 11.2891 0.91015C11.3078 0.91442 11.3259 0.920467 11.3438 0.927338C11.3496 0.9296 11.3552 0.932601 11.361 0.93515C11.3771 0.942258 11.3927 0.950169 11.4078 0.959369C11.414 0.963129 11.4206 0.966183 11.4266 0.970306C11.4466 0.984054 11.4654 0.999763 11.4828 1.01718L11.5344 1.07968C11.5431 1.09292 11.5485 1.1079 11.5555 1.12187C11.56 1.13085 11.5657 1.13915 11.5696 1.14843C11.5832 1.18169 11.5911 1.21637 11.5953 1.25156C11.5973 1.26761 11.6 1.28365 11.6 1.29999V4.49999C11.6 4.72091 11.4209 4.89999 11.2 4.89999C10.9791 4.89999 10.8 4.72091 10.8 4.49999V2.26562L7.48284 5.58281C7.32663 5.73902 7.07342 5.73902 6.91721 5.58281C6.761 5.4266 6.761 5.17339 6.91721 5.01718L10.2344 1.69999H8.00003C7.77911 1.69999 7.60003 1.52091 7.60003 1.29999C7.60003 1.07908 7.77911 0.899994 8.00003 0.899994H11.2Z" fill="currentColor"></path>
                                     </svg>
                                 </a>
                             </div>
@@ -113,12 +170,12 @@
                             infrastructure of Ethiopian language AI
                         </p>
                         <div class="projects__info-tech-stack">
-                            <img src="Assets/html-tech.png" alt="html" class="projects__stack-img">
-                            <img src="Assets/css-tech.png" alt="css" class="projects__stack-img">
+                            <img src="Assets/html-tech.png" alt="html logo" class="projects__stack-img">
+                            <img src="Assets/css-tech.png" alt="css logo" class="projects__stack-img">
                         </div>
                     </div>
                 </div>
-                <div class="projects__anthropic">
+                <div class="projects__anthropic surface-card">
                     <div class="projects__image-wrapper">
                         <a href="#" class="projects__image-link" target="_blank">
                             <img src="Assets/ss-anthropic-clone.png" alt="ss-anthropic-clone" class="projects__img">
@@ -128,21 +185,14 @@
                         <div class="projects__info-heading">
                             <h3 class="projects__info-title">Anthropic.com Clone</h3>
                             <div class="projects__info-external-links">
-                                <a href="https://github.com/mhmd-242/Anthropic-Homepage-Clone-CSS"
-                                    class="projects__info-links" target="_blank">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        class="projects__info-links-svg projects__info-links-svg-gh">
-                                        <path
-                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                <a href="https://github.com/mhmd-242/Anthropic-Homepage-Clone-CSS" class="projects__info-links" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="projects__info-links-svg projects__info-links-svg-gh">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                     </svg>
                                 </a>
-                                <a href="https://dataset-et-clone.vercel.app/" class="projects__info-links"
-                                    target="_blank">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 13"
-                                        class="projects__info-links-svg">
-                                        <path
-                                            d="M5.60002 0.899994C5.82094 0.899994 6.00002 1.07908 6.00002 1.29999C6.00002 1.52091 5.82094 1.69999 5.60002 1.69999H1.60002C1.37911 1.69999 1.20002 1.87908 1.20002 2.09999V10.9C1.20002 11.1209 1.37911 11.3 1.60002 11.3H10.4C10.6209 11.3 10.8 11.1209 10.8 10.9V6.89999C10.8 6.67908 10.9791 6.49999 11.2 6.49999C11.4209 6.49999 11.6 6.67908 11.6 6.89999V10.9C11.6 11.5627 11.0628 12.1 10.4 12.1H1.60002C0.937283 12.1 0.400024 11.5627 0.400024 10.9V2.09999C0.400024 1.43725 0.937283 0.899994 1.60002 0.899994H5.60002ZM11.2 0.899994C11.2299 0.899994 11.2598 0.903486 11.2891 0.91015C11.3078 0.91442 11.3259 0.920467 11.3438 0.927338C11.3496 0.9296 11.3552 0.932601 11.361 0.93515C11.3771 0.942258 11.3927 0.950169 11.4078 0.959369C11.414 0.963129 11.4206 0.966183 11.4266 0.970306C11.4466 0.984054 11.4654 0.999763 11.4828 1.01718L11.5344 1.07968C11.5431 1.09292 11.5485 1.1079 11.5555 1.12187C11.56 1.13085 11.5657 1.13915 11.5696 1.14843C11.5832 1.18169 11.5911 1.21637 11.5953 1.25156C11.5973 1.26761 11.6 1.28365 11.6 1.29999V4.49999C11.6 4.72091 11.4209 4.89999 11.2 4.89999C10.9791 4.89999 10.8 4.72091 10.8 4.49999V2.26562L7.48284 5.58281C7.32663 5.73902 7.07342 5.73902 6.91721 5.58281C6.761 5.4266 6.761 5.17339 6.91721 5.01718L10.2344 1.69999H8.00003C7.77911 1.69999 7.60003 1.52091 7.60003 1.29999C7.60003 1.07908 7.77911 0.899994 8.00003 0.899994H11.2Z"
-                                            fill="currentColor"></path>
+                                <a href="https://dataset-et-clone.vercel.app/" class="projects__info-links" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 13" class="projects__info-links-svg">
+                                        <path d="M5.60002 0.899994C5.82094 0.899994 6.00002 1.07908 6.00002 1.29999C6.00002 1.52091 5.82094 1.69999 5.60002 1.69999H1.60002C1.37911 1.69999 1.20002 1.87908 1.20002 2.09999V10.9C1.20002 11.1209 1.37911 11.3 1.60002 11.3H10.4C10.6209 11.3 10.8 11.1209 10.8 10.9V6.89999C10.8 6.67908 10.9791 6.49999 11.2 6.49999C11.4209 6.49999 11.6 6.67908 11.6 6.89999V10.9C11.6 11.5627 11.0628 12.1 10.4 12.1H1.60002C0.937283 12.1 0.400024 11.5627 0.400024 10.9V2.09999C0.400024 1.43725 0.937283 0.899994 1.60002 0.899994H5.60002ZM11.2 0.899994C11.2299 0.899994 11.2598 0.903486 11.2891 0.91015C11.3078 0.91442 11.3259 0.920467 11.3438 0.927338C11.3496 0.9296 11.3552 0.932601 11.361 0.93515C11.3771 0.942258 11.3927 0.950169 11.4078 0.959369C11.414 0.963129 11.4206 0.966183 11.4266 0.970306C11.4466 0.984054 11.4654 0.999763 11.4828 1.01718L11.5344 1.07968C11.5431 1.09292 11.5485 1.1079 11.5555 1.12187C11.56 1.13085 11.5657 1.13915 11.5696 1.14843C11.5832 1.18169 11.5911 1.21637 11.5953 1.25156C11.5973 1.26761 11.6 1.28365 11.6 1.29999V4.49999C11.6 4.72091 11.4209 4.89999 11.2 4.89999C10.9791 4.89999 10.8 4.72091 10.8 4.49999V2.26562L7.48284 5.58281C7.32663 5.73902 7.07342 5.73902 6.91721 5.58281C6.761 5.4266 6.761 5.17339 6.91721 5.01718L10.2344 1.69999H8.00003C7.77911 1.69999 7.60003 1.52091 7.60003 1.29999C7.60003 1.07908 7.77911 0.899994 8.00003 0.899994H11.2Z" fill="currentColor"></path>
                                     </svg>
                                 </a>
                             </div>
@@ -151,8 +201,8 @@
                             intelligence safety and research company
                         </p>
                         <div class="projects__info-tech-stack">
-                            <img src="Assets/html-tech.png" alt="html" class="projects__stack-img">
-                            <img src="Assets/css-tech.png" alt="css" class="projects__stack-img">
+                            <img src="Assets/html-tech.png" alt="html logo" class="projects__stack-img">
+                            <img src="Assets/css-tech.png" alt="css logo" class="projects__stack-img">
                         </div>
                     </div>
                 </div>
@@ -161,34 +211,38 @@
 
         <section class="contact" id="contact">
             <h2 class="contact__heading">Contact</h2>
-            <p class="contact__sub-heading"></p>
+            <p class="contact__sub-heading">Have a project in mind or want to connect?</p>
             <div class="contact__wrapper">
-                <div class="contact__send-message-wrapper">
+                <div class="contact__send-message-wrapper surface-card">
                     <div class="contact__send-message">
-                        <p class="contact__send-message-heading">Contact me on email</p>
+                        <h3 class="contact__send-message-heading">Contact me on email</h3>
                         <a href="mailto:muhammedoumer000@gmail.com" class="contact__send-message-email">
                             <h3 class="contact__send-email">muhammedoumer000@gmail.com</h3>
                             <div class="contact__send-message-email-go">
                                 <p class="contact__send-message-email-goto">Go to Email</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="contact__socials-link-svg-top-right" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="contact__send-message-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                     <path d="M7 7h10v10"></path>
                                     <path d="M7 17 17 7"></path>
                                 </svg>
                             </div>
                         </a>
                     </div>
-                    <div class="contact__form">
-                        <p class="contact__form-heading">Send me a message</p>
-                        <label class="contact__form-label">Name</label>
-                        <input type="text" class="contact__form-input">
-                        <label class="contact__form-label">Email</label>
-                        <input type="email" class="contact__form-input">
-                        <label class="contact__form-label">Your Message</label>
-                        <textarea class="contact__form-text-area"></textarea>
-                        <a href="" class="contact__form-send">Send</a>
-                    </div>
+                    <form class="contact__form">
+                        <h3 class="contact__form-heading">Send me a message</h3>
+
+                        <label class="contact__form-label" for="name">Name</label>
+                        <input id="name" name="name" type="text" class="contact__form-input" autocomplete="name" required>
+
+                        <label class="contact__form-label" for="email">Email</label>
+                        <input id="email" name="email" type="email" class="contact__form-input" autocomplete="email" required>
+
+                        <label class="contact__form-label" for="message">Your Message</label>
+                        <textarea id="message" name="message" class="contact__form-text-area" required></textarea>
+
+                        <button type="submit" class="contact__form-send">Send</button>
+                    </form>
                 </div>
-                <div class="contact__links">
+                <div class="contact__links surface-card">
                     <div class="contact__socials">
                         <h3 class="contact__socials-heading">You can find me on</h3>
                         <a href="" class="contact__socials-link">             
@@ -203,7 +257,7 @@
                                 </svg>
                             </div>
                         </a>
-                        <a href="" class="contact__socials-link">
+                        <a href="https://x.com/mhmd_2427" class="contact__socials-link">
                             <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="contact__socials-link-svg">
                                 <title>X</title>
                                 <path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/>
@@ -216,7 +270,7 @@
                                 </svg>
                             </div>
                         </a>
-                        <a href="" class="contact__socials-link">
+                        <a href="https://github.com/mhmd-242" class="contact__socials-link">
                             <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="contact__socials-link-svg">
                                 <title>GitHub</title>
                                 <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
@@ -229,7 +283,7 @@
                                 </svg>
                             </div>
                         </a>
-                        <a href="" class="contact__socials-link">
+                        <a href="https://t.me/mhmd_242" class="contact__socials-link">
                             <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="contact__socials-link-svg">
                                 <title>Telegram</title>
                                 <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
@@ -264,7 +318,7 @@
                         <h3 class="contact__available">I'm open to frontend developer roles</h3>
                         <a href="" class="contact__download-cv">
                             Download CV
-                            <svg xmlns="http://www.w3.org/2000/svg" class="contact__socials-link-svg-top-right" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="contact__download-cv-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <path d="M7 7h10v10"></path>
                                 <path d="M7 17 17 7"></path>
                             </svg>
