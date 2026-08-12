@@ -32,7 +32,7 @@ A personal portfolio website showcasing my work as a junior frontend developer.
 
 ```
 Portfolio/
-├── Assets/          # Images, SVG icons, and logos
+├── Assets/          # Images and logos
 ├── index.html       # Main HTML file
 ├── index.css        # Stylesheet
 └── README.md
