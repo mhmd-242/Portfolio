@@ -174,7 +174,6 @@ nav {
     text-decoration: none;
     padding: 1rem 0;
     width: 100%;
-    padding: 1rem 0;
     text-align: center;
     color: var(--font-color-primary);
     margin-bottom: 0.5rem;
@@ -583,12 +582,11 @@ nav {
     resize: none;
 }
 .contact__form-send {
-    text-decoration: none;
-    padding: 0.5rem 0;
+    padding: 0.75rem 0;
     text-align: center;
     background-color: var(--bg-primary);
     border: 1px solid var(--border-primary);
-    border-radius: 15px;
+    border-radius: 25px;
     color: var(--font-color-secondary);
     cursor: pointer;
     text-decoration: none;
@@ -636,8 +634,7 @@ nav {
     width: 0.9rem;
     transition: transform 0.2s ease;
 }
-.contact__socials-link:hover ,
-.contact__socials-link:hover p {
+.contact__socials-link:hover {
     color: var(--font-color-tertiary);
 }
 .contact__socials-link:hover .contact__socials-link-svg-top-right {
@@ -710,13 +707,13 @@ footer {
 .footer__heading-name {
     margin-bottom: 0.3rem;
 }
-.footer__links {
+.footer__links-wrapper {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
     animation: load 0.3s ease-in 0.1s forwards;
 }
-.footer__links-wrapper {
+.footer__links {
     height: 40px;
     width: 40px;
     border: 1px solid var(--border-primary);
@@ -724,15 +721,16 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
-.footer__links-wrapper:hover {
+.footer__links:hover {
     border: 1px solid var(--border-secondary);
 }
 .footer__links-svg {
     width: 1.2rem;
     fill: var(--font-color-primary);
 }
-.footer__links-wrapper:hover .footer__links-svg {
+.footer__links:hover .footer__links-svg {
     fill: var(--font-color-tertiary);
 }
 .footer__copyright {
@@ -761,7 +759,7 @@ footer {
     .contact__links ,
     .contact__status-icon ,
     .footer__heading ,
-    .footer__links ,
+    .footer__links-wrapper ,
     .footer__copyright{
         opacity: 0;
     }
@@ -797,7 +795,7 @@ footer {
     .contact__links ,
     .contact__status-icon ,
     .footer__heading ,
-    .footer__links ,
+    .footer__links-wrapper ,
     .footer__copyright {
         opacity: 1;
     }
