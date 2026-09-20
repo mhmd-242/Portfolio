@@ -4,12 +4,12 @@ A personal portfolio website showcasing my work as a junior frontend developer.
 
 ## Live Demo
 
-[https://mhmd-242.vercel.app/](#) <!-- Add your deployment link here -->
+[https://mhmd-242.vercel.app/](#)
 
 ## Built With
 
 - HTML
-- Vanilla CSS
+- CSS
 
 ## Features
 
@@ -33,7 +33,7 @@ A personal portfolio website showcasing my work as a junior frontend developer.
 ```
 Portfolio/
 ├── Assets/          # Images and logos
-├── index.html       # Main HTML file
+├── README.md
 ├── index.css        # Stylesheet
-└── README.md
+└── index.html       # Main HTML file
 ```
